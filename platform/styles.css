@@ -1,0 +1,403 @@
+.module_container {
+        width: 100%;
+        background-color: #fff;
+        display: inline-block;
+        min-height: 538px;
+        /* padding: 10px; */
+    }
+    /* .right_container{
+        width: 25%;
+        background-color: #fff;
+        min-height: 538px;
+        display: inline-block;
+    } */
+    .module_title {
+        font-size: 26px;
+
+        font-weight: bold;
+        color: rgba(0, 0, 0, 1);
+        background-image: url('/public/static/front/images/carbon_accounting_title.png');
+        background-repeat:no-repeat;
+        background-size: contain;
+        height: 10px;
+        width: 388px;
+        color: #fff;
+        line-height: 90px;
+        padding-left: 30px;
+    }
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: xx-large;
+    margin-inline-start: 20px;
+    margin-block-start: 40px;
+}
+    .module_main {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .step_tab {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #d61518;
+        line-height: 39px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .tab_item {
+        display: inline-block;
+        padding: 13px 0;
+        border-right: 1px solid #d61518;
+        text-align: center;
+        width: 24.92%;
+        height: 70px;
+        font-size: 16px;
+    }
+    .step_tab .tab_item:last-child{
+        border-right: none;
+    }
+    .tab_item span{
+        color: #d61518;
+        font-size: 16px;
+
+        font-weight: 500;
+        margin-right: 10px;
+    }
+
+    div.this_tab_item {
+        background-color: #d61518;
+    }
+    div.this_tab_item>p ,div.this_tab_item>p>span {
+        color: #fff;
+    }
+
+    .tab_content_container {
+        margin-top: 20px;
+    }
+
+    .tab_content {
+        display: none;
+    }
+
+    div.this_tab_content {
+        display: block;
+    }
+
+    .tab1_table_head {
+        display: flex;
+        font-size: 16px;
+        border-bottom: 1px solid #d61518;
+        padding-bottom: 10px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .tab4_table_head {
+        display: flex;
+        justify-content: space-around;
+        font-size: 16px;
+        border-bottom: 1px solid #d61518;
+        padding-bottom: 10px;
+    }
+    .tab4_table_head>div:last-child{
+        width: 400px;
+        text-align: right;
+    }
+
+    .tab1_table_head>div {
+        width: 120px;
+        text-align: center;
+    }
+
+    .tab4_table_head>div {
+        width: 200px;
+        text-align: center;
+    }
+    div.min_button {
+        background-color: #d61518;
+        color: #fff;
+        width: 48px;
+        height: 26px;
+        text-align: center;
+        line-height: 26px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+    }
+    div.min_icon_button {
+        width: 23px;
+        height: 23px;
+        border-radius: 4px;
+        border: 1px solid #D61519;
+        display: inline-block;
+        line-height: 23px;
+        font-size: 32px;
+        color: #d61519;
+        vertical-align: middle;
+        cursor: pointer;
+        text-align: center;
+    }
+    div.max_button {
+        width: 80px;
+        height: 32px;
+        background: #FFFFFF;
+        border-radius: 4px;
+        border: 1px solid #D61519;
+        cursor: pointer;
+        font-size: 18px;
+
+        font-weight: 400;
+        color: #D61519;
+        line-height: 32px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .confirm_button {
+        margin-right: 8px;
+    }
+
+    .tab1_table_item,.tab4_table_item{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        font-size: 16px;
+        border-bottom: 1px solid #dedede;
+        /* height: 45px; */
+        line-height: 45px;
+    }
+    /* .tab4_table_item{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        font-size: 16px;
+        border-bottom: 1px solid #dedede;
+        line-height: 45px;
+    } */
+
+    .tab1_table_item>div {
+        width: 120px;
+        text-align: center;
+    }
+    .tab4_table_item>div {
+        width: 200px;
+        text-align: center;
+    }
+    .tab4_table_item>.button_div{
+        width: 400px;
+        text-align: right;
+    }
+    .tab1_table_item>div.operation_button_div
+    ,.tab4_table_item>div.operation_button_div {
+        width: 100%;
+    }
+    .tab1_table_item input {
+        border: 1px solid #dedede;
+        width:70px;
+        height: 30px;
+        padding: 0 8px;
+    }
+    .tab4_table_item input {
+        border: 1px solid #dedede;
+        width:160px;
+        height: 30px;
+        padding: 0 8px;
+    }
+    .tab1_table_item .custom_select input {
+        border: 1px solid #dedede;
+        width: 100px;
+        height: 30px;
+        padding: 0 8px;
+        cursor: pointer;
+    }
+    .tab4_table_item .custom_select input {
+        border: 1px solid #dedede;
+        width: 160px;
+        height: 30px;
+        padding: 0 8px;
+        cursor: pointer;
+    }
+    .custom_select{
+        position: relative;
+    }
+    .tab1_table_item .custom_select span{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        right: 2px;
+        line-height: 22px;
+        top: 12px;
+    }
+    .tab4_table_item .custom_select span{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        right: 16px;
+        line-height: 22px;
+        top: 12px;
+    }
+    .module_container select {
+        border: 1px solid #dedede;
+        width: 100px;
+        height: 30px;
+        -webkit-appearance: auto;
+        text-align: center;
+    }
+
+    input.is_null {
+        box-shadow: 0px 0px 4px #d61518;
+        border: none;
+    }
+    .calculation_result {
+        margin-top: 20px;
+    }
+    .calculation_target {
+        height: 40px;
+        font-size: 20px;
+
+        font-weight: 600;
+        color: #000000;
+        line-height: 40px;
+    }
+    .calculation_target_result{
+        font-size: 15px;
+
+        font-weight: 400;
+        color: #000000;
+        line-height: 21px;
+        margin-top: 10px;
+    }
+    .calculation_target_result>span {
+        border-radius: 3px;
+        border: 1px solid #D0D0D0;
+        display: inline-block;
+        padding: 4px 8px;
+        margin-right: 10px;
+        min-width: 120px;
+        height: 21px;
+        vertical-align: middle;
+    }
+    .car_model_select
+    ,.energy_select
+    ,.standard_select{
+        display: none;
+        position: absolute;
+        top: 37px;
+        left: 1px;
+        width: 118px;
+        background-color: #fff;
+        font-size: 16px;
+        z-index: 2;
+    }
+    .material_type_select{
+        display: none;
+        position: absolute;
+        top: 37px;
+        left: 11px;
+        width: 178px;
+        background-color: #fff;
+        font-size: 16px;
+        z-index: 2;
+    }
+    ul.select_div{
+        border: 1px solid #D0D0D0;
+    }
+    .select_div>li{
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .select_div>li:hover{
+        background-color: #d61518;
+        color: #fff;
+    }
+    .step_operation{
+        margin-top: 20px;
+    }
+    .step_operation .max_button{
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .step_operation .max_button_bg{
+        min-width: 80px;
+        padding: 0 10px;
+        height: 40px;
+        background: #D61519;
+        border-radius: 5px;
+        border: 1px solid #D61519;
+        cursor: pointer;
+        font-size: 18px;
+
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 40px;
+        text-align: center;
+        display: inline-block;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .postscript {
+        margin-top: 10px;
+        height: 22px;
+        font-size: 16px;
+
+        font-weight: 400;
+        color: #666666;
+        line-height: 22px;
+    }
+    .tab2_table_item,.tab3_table_item {
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    .tab2_table_item>div,.tab3_table_item>div {
+        display: inline-block;
+        width: 200px;
+        font-size: 16px;
+
+        font-weight: 400;
+        color: #000000;
+        line-height: 50px;
+    }
+    .tab3_table_item>div:first-child{
+        width: 120px;
+    }
+    .tab2_table_item input,.tab3_table_item input{
+        width: 124px;
+        height: 34px;
+        border-radius: 3px;
+        border: 1px solid #D0D0D0;
+        padding: 0px 8px;
+    }
+    .tab4_table_item>div.seize_a_seat {
+        width: 400px;
+    }
+    .last_result{
+        min-width: 240px;
+        height: 34px;
+        line-height: 34px;
+        border-radius: 3px;
+        border: 1px solid #D0D0D0;
+        padding: 0px 8px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .tab5_table_item>div {
+        display: inline-block;
+        min-width: 120px;
+        font-size: 16px;
+
+        font-weight: 400;
+        color: #000000;
+        line-height: 50px;
+    }

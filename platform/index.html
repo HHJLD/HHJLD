@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳核算平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<h1>物流碳核算</h1>
+<div class="page-layout-container container">
+    <div class="module_container">
+        <div class="module_title">碳核算</div>
+        <div class="module_main">
+            <!-- tab-->
+            <div class="step_tab">
+                <div class="tab_item this_tab_item">
+                    <p>
+                        <span class="num">一</span>
+                        运输
+                    </p>
+                </div>
+                <div class="tab_item">
+                    <p>
+                        <span class="num">二</span>
+                        仓储
+                    </p>
+                </div>
+                <div class="tab_item">
+                    <p>
+                        <span class="num">三</span>
+                        包装
+                    </p>
+                </div>
+                <div class="tab_item">
+                    <p>
+                        <span class="num">最后</span>
+                        排放汇总
+                    </p>
+                </div>
+            </div>
+            <!-- tab内容 -->
+            <div class="tab_content_container">
+                <div class="tab_content this_tab_content">
+                    <div class="table_body tab2_content">
+                        <input type="hidden" value="0" class="itemTwoJson">
+                        <div class="tab2_table_item">
+                            <div>运输方式</div>
+                            <div>运输重量（吨）</div>
+                            <div>运输距离（公里）</div>
+                        </div>
+                         <div class="min_button tab2_add_button" onclick="addTransportRow()">新增</div>
+                    </div>
+                </div>
+                <div class="tab2_table_body" id="transportBody">
+                    <div class="tab2_table_item" mode_type="公路">
+                        <input type="hidden" value="0" class="item_result"/>
+                        <div>公路（自营及外包运输）</div>
+                        <div>
+                            <input type="number" class="transport_weight" name="highwayWeight" value="" placeholder="运输总重量 (kg)"/>
+                        </div>
+                        <div>
+                            <input type="number" class="transport_distance" name="highwayDistance" value="" placeholder="运输总距离 (km)"/>
+                        </div>
+                    </div>
+                    <div class="tab2_table_item" mode_type="铁路">
+                        <input type="hidden" value="0" class="item_result"/>
+                        <div>铁路（自营及外包运输）</div>
+                        <div>
+                            <input type="number" class="transport_weight" name="railwayWeight" value="" placeholder="运输总重量 (kg)"/>
+                        </div>
+                        <div>
+                            <input type="number" class="transport_distance" name="railwayDistance" value="" placeholder="运输总距离 (km)"/>
+                        </div>
+                    </div>
+                    <div class="tab2_table_item" mode_type="水运">
+                        <input type="hidden" value="0" class="item_result"/>
+                        <div>水运（自营及外包运输）</div>
+                        <div>
+                            <input type="number" class="transport_weight" name="waterWeight" value="" placeholder="运输总重量 (kg)"/>
+                        </div>
+                        <div>
+                            <input type="number" class="transport_distance" name="waterDistance" value="" placeholder="运输总距离 (km)"/>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                    <div class="calculation_result">
+                        <div class="calculation_target">运输二氧化碳排放当量</div>
+                        <div class="calculation_target_result">
+                            <span class="transport_result"> </span>tCO<sub>2</sub>e
+                        </div>
+                    </div>
+                    <div class="step_operation">
+                        <div class="max_button prev_step">上一步</div>
+                        <div class="max_button skip_step">跳过</div>
+                        <div class="max_button_bg next_step">下一步</div>
+                    </div>
+                </div>
+                <div class="tab_content">
+                    <div class="tab3_content">
+                        <input type="hidden" value="0" class="itemThreeJson">
+                        <div class="tab3_table_item">
+                            <div>仓库总面积</div>
+                            <div>
+                                <input type="number" class="warehouse_area" value=""/>
+                                <span>平方米</span>
+                            </div>
+                        </div>
+                        <div class="tab3_table_item">
+                            <div>仓库总耗电量</div>
+                            <div>
+                                <input type="number" class="warehouse_consume_power" value=""/>
+                                <span>kWh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculation_result">
+                        <div class="calculation_target">仓储二氧化碳排放当量</div>
+                        <div class="calculation_target_result">
+                            <span class="warehouse_result"> </span>tCO<sub>2</sub>e
+                        </div>
+                    </div>
+                    <div class="step_operation">
+                        <div class="max_button prev_step">上一步</div>
+                        <div class="max_button skip_step">跳过</div>
+                        <div class="max_button_bg next_step">下一步</div>
+                    </div>
+                </div>
+                <div class="tab_content">
+                    <div class="tab4_content tab4_table">
+                        <div class="tab4_table_head">
+                            <div>包装耗材类型</div>
+                            <div>耗材消耗量（吨）</div>
+                            <div>
+                                <div class="min_button  tab4_add_button">新增</div>
+                            </div>
+                        </div>
+                        <div class="tab4_table_body table_body">
+                        </div>
+                    </div>
+                    <div class="calculation_result">
+                        <div class="calculation_target">包装二氧化碳排放当量</div>
+                        <div class="calculation_target_result">
+                            <span class="packing_result"> </span>tCO<sub>2</sub>
+                        </div>
+                    </div>
+                    <div class="step_operation">
+                        <div class="max_button prev_step">上一步</div>
+                        <div class="max_button skip_step">跳过</div>
+                        <div class="max_button_bg next_step">下一步</div>
+                    </div>
+                </div>
+                <div class="tab_content">
+                    <div class="tab5_content">
+                        <input type="hidden" value="0" class="itemFiveJson">
+                        <div class="tab5_table_item">
+                            <div>运输碳核算</div>
+                            <div>
+                                <div class=" last_result last_result_transport">0</div>
+                                <span>tCO<sub>2</sub>e</span>
+                            </div>
+                        </div>
+                        <div class="tab5_table_item">
+                            <div>仓储碳核算</div>
+                            <div>
+                                <div class=" last_result last_result_storage" >0</div>
+                                <span>tCO<sub>2</sub></span>
+                            </div>
+                        </div>
+                        <div class="tab5_table_item">
+                            <div>包装碳核算</div>
+                            <div>
+                                <div class=" last_result last_result_packing" >0</div>
+                                <span>tCO<sub>2</sub>e</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculation_result">
+                        <div class="calculation_target">总二氧化碳排放当量</div>
+                        <div class="calculation_target_result">
+                            <span class="all_total_result"> </span>tCO<sub>2</sub>e
+                        </div>
+                    </div>
+                    <div class="step_operation">
+                        <div class="max_button prev_step">上一步</div>
+                        <div class="max_button_bg again">重新开始计算</div>
+                        <div class="max_button_bg export_result">导出</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
